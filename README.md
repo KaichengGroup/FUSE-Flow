@@ -18,7 +18,7 @@ directional control, enabling unprecedented 50X widefield imaging on thick tissu
 clarity, and 3D topography of surface microstructure. Generative modelling of high-magnification 
 images using our normalising flow architecture FUSE-Flow (open-source) enhanced low-magnification 
 imaging by variational inference. Comprehensive validation comprised multi-scale fluorescence 
-histology compared with standard H\&amp;E, and quantitative analyses of senescence, antibiotic 
+histology compared with standard H&E, and quantitative analyses of senescence, antibiotic 
 toxicity, and nuclear DNA content in tissue models via efficient sampling of entire murine organs 
 by thick slices up to 0.4x8x12mm and 1.3 million cells per surface. This technology addresses 
 long-standing laboratory gaps for high-throughput studies for rapid cellular insights.
@@ -75,9 +75,9 @@ long-standing laboratory gaps for high-throughput studies for rapid cellular ins
 > features.\
 >d. FUSE-Flow outputs show no out-of-focus areas, typically seen in higher-magnification images due 
 > to tissue regions falling outside objective depth-of-field.\
->e. Multiple samples ($n=64$) drawn from learnt posterior distribution could estimate conditional 
-> standard error to identify regions with highly aleatoric uncertainty. \sigma=5 
-> (or p-value$=3e^{-7}$) was highlighted.
+>e. Multiple samples (n=64) drawn from learnt posterior distribution could estimate conditional 
+> standard error to identify regions with highly aleatoric uncertainty. σ=5 
+> (or p-value=3e<sup>-7</sup>) was highlighted.
 
 <img src="readme_figures/supp_9b.png" width="1000px"></img>
 <img src="readme_figures/supp_10.png" width="1000px"></img>
