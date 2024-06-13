@@ -1,46 +1,56 @@
 # FUSE-Flow
 
 ## Multi-scale tissue fluorescence mapping with fibre optic ultraviolet excitation and generative modelling
-[[bioRxiv](https://www.biorxiv.org/content/10.1101/2022.12.28.521919v3)], [[KaichengGroup](https://liangresearch.com/)]
+[[Optica](https://opg.optica.org/optica/fulltext.cfm?uri=optica-11-5-673&id=550018)],
+[[bioRxiv](https://www.biorxiv.org/content/10.1101/2022.12.28.521919v3)],
+[[Liang Research Group](https://liangresearch.com/)]
 
-Joel Lang Yi Ang*, Ko Hui Tan*, Alexander Si Kai Yong*, Chiyo Wan Xuan Tan, Jessica Sze Jia Kng, Cyrus Jia Jun Tan, 
-Rachael Hui Kie Soh, Julian Yi Hong Tan, Kaicheng Liang
+Joel Lang Yi Ang*, Ko Hui Tan*, Alexander Si Kai Yong*, Chiyo Wan Xuan Tan, Jessica Sze Jia Kng, 
+Cyrus Jia Jun Tan, Rachael Hui Kie Soh, Julian Yi Hong Tan, Kaicheng Liang
 
 *Equal contribution
 
 ### Abstract
-Cellular imaging of thick samples requires physical sectioning or laser scanning microscopy, 
-generally incompatible with high-throughput requirements. We developed fibre optic microscopy 
-with ultraviolet (UV) surface excitation (FUSE), a portable, quantitative fluorescence imaging 
-platform for thick tissue that substantially advances prior UV excitation approaches with 
-illumination engineering and computational methods. Optic fibres delivered <300nm light with 
-directional control, enabling unprecedented 50X widefield imaging on thick tissue with sub-nuclear 
-clarity, and 3D topography of surface microstructure. Generative modelling of high-magnification 
-images using our normalising flow architecture FUSE-Flow (open-source) enhanced low-magnification 
-imaging by variational inference. Comprehensive validation comprised multi-scale fluorescence 
-histology compared with standard H&E, and quantitative analyses of senescence, antibiotic 
-toxicity, and nuclear DNA content in tissue models via efficient sampling of entire murine organs 
-by thick slices up to 0.4x8x12mm and 1.3 million cells per surface. This technology addresses 
-long-standing laboratory gaps for high-throughput studies for rapid cellular insights.
+
+> Cellular imaging of thick samples requires physical sectioning or laser scanning microscopy,
+which can be restrictive, involved, and generally incompatible with high-throughput requirements.
+We developed fiber optic microscopy with ultraviolet (UV) surface excitation (FUSE), a portable
+and quantitative fluorescence imaging platform for thick tissue that enabled quick sub-cellular
+imaging without thin sections. We substantially advanced prior UV excitation approaches with
+illumination engineering and computational methods. Optical fibers delivered <300nm light with
+directional control, enabling unprecedented 50× widefield imaging on thick tissue with sub-nuclear
+clarity, and 3D topography of surface microstructure. Probabilistic modeling of high-magnification
+images using our normalizing flow architecture FUSE-Flow (made freely available as open-source
+software) enhanced low-magnification imaging with measurable localized uncertainty via variational
+inference. Comprehensive validation comprised multi-scale fluorescence histology compared with
+standard H&E histology, and quantitative analyses of senescence, antibiotic toxicity, and nuclear
+DNA content in tissue models via efficient sampling of thick slices from entire murine organs up
+to 0.4×8×12mm and 1.3 million cells per surface. This technology addresses long-standing
+laboratory gaps in high-throughput studies for rapid cellular insights.
 
 ### BibTex
+
 ```
-@article{ang_multi-scale_2023,
-	title = {Multi-scale tissue fluorescence mapping with fibre optic ultraviolet excitation and generative modelling},
-	url = {https://www.biorxiv.org/content/early/2023/10/19/2022.12.28.521919},
-	doi = {10.1101/2022.12.28.521919},
-	abstract = {Cellular imaging of thick samples requires physical sectioning or laser scanning microscopy, generally incompatible with high-throughput requirements. We developed fibre optic microscopy with ultraviolet (UV) surface excitation (FUSE), a portable, quantitative fluorescence imaging platform for thick tissue that substantially advances prior UV excitation approaches with illumination engineering and computational methods. Optic fibres delivered \&lt;300nm light with directional control, enabling unprecedented 50X widefield imaging on thick tissue with sub-nuclear clarity, and 3D topography of surface microstructure. Generative modelling of high-magnification images using our normalising flow architecture FUSE-Flow (open-source) enhanced low-magnification imaging by variational inference. Comprehensive validation comprised multi-scale fluorescence histology compared with standard H\&amp;E, and quantitative analyses of senescence, antibiotic toxicity, and nuclear DNA content in tissue models via efficient sampling of entire murine organs by thick slices up to 0.4x8x12mm and 1.3 million cells per surface. This technology addresses long-standing laboratory gaps for high-throughput studies for rapid cellular insights.Competing Interest StatementThe authors have declared no competing interest.},
-	journal = {bioRxiv},
-	author = {Ang, Joel Lang Yi and Tan, Ko Hui and Yong, Alexander Si Kai and Tan, Chiyo Wan Xuan and Kng, Jessica Sze Jia and Tan, Cyrus Jia Jun and Soh, Rachael Hui Kie and Tan, Julian Yi Hong and Liang, Kaicheng},
-	year = {2023},
-	note = {Publisher: Cold Spring Harbor Laboratory
-\_eprint: https://www.biorxiv.org/content/early/2023/10/19/2022.12.28.521919.full.pdf},
+@article{Ang:24,
+author = {Joel Lang Yi Ang and Ko Hui Tan and Alexander Si Kai Yong and Chiyo Wan XuanTan and Jessica Sze Jia Kng and Cyrus Jia Jun Tan and Rachael Hui Kie Soh and Julian YiHong Tan and Kaicheng Liang},
+journal = {Optica},
+keywords = {Biomedical imaging; Fiber optic couplers; Optical coherence tomography; Phaseimaging; Scanning microscopy; Spatial resolution},
+number = {5},
+pages = {673--685},
+publisher = {Optica Publishing Group},
+title = {Multi-scale tissue fluorescence mapping with fiber optic ultraviolet excitationand generative modeling},
+volume = {11},
+month = {May},
+year = {2024},
+url = {https://opg.optica.org/optica/abstract.cfm?URI=optica-11-5-673},
+doi = {10.1364/OPTICA.515501},
+abstract = {Cellular imaging of thick samples requires physical sectioning or laserscanning microscopy, which can be restrictive, involved, and generally incompatible withhigh-throughput requirements. We developed fiber optic microscopy with ultraviolet (UV)surface excitation (FUSE), a portable and quantitative fluorescence imaging platform forthick tissue that enabled quick sub-cellular imaging without thin sections. Wesubstantially advanced prior UV excitation approaches with illumination engineering andcomputational methods. Optical fibers delivered \&lt;300n            m light withdirectional control, enabling unprecedented 50{\texttimes} widefield imaging on thicktissue with sub-nuclear clarity, and 3D topography of surface microstructure.Probabilistic modeling of high-magnification images using our normalizing flowarchitecture FUSE-Flow (made freely available as open-source software) enhancedlow-magnification imaging with measurable localized uncertainty via variationalinference. Comprehensive validation comprised multi-scale fluorescence histology comparedwith standard H\&E histology, and quantitative analyses of senescence, antibiotictoxicity, and nuclear DNA content in tissue models via efficient sampling of thick slicesfrom entire murine organs up to 0.4{\texttimes}8{\texttimes}12m            m and 1.3million cells per surface. This technology addresses long-standing laboratory gaps inhigh-throughput studies for rapid cellular insights.}
 }
 ```
 
 ## Model
 
-<img src="readme_figures/supp_3a.png" width="1000px"></img>
+<img src="docs/supp_3a.png" width="1000px"></img>
 
 >- Normalising flow module
 >  - Scale Block
@@ -64,7 +74,7 @@ long-standing laboratory gaps for high-throughput studies for rapid cellular ins
 
 ## Results
 
-<img src="readme_figures/fig_2.png" width="1000px"></img>
+<img src="docs/fig_2.png" width="1000px"></img>
 
 >a. Performance overview on fluorescent histological images (held-out) of fresh mouse kidney slice. 
 > FUSE-Flow performed domain alignment of input 4X images to reference images in colour and detail 
@@ -79,8 +89,8 @@ long-standing laboratory gaps for high-throughput studies for rapid cellular ins
 > standard error to identify regions with highly aleatoric uncertainty. σ=5 
 > (or p-value=3e<sup>-7</sup>) was highlighted.
 
-<img src="readme_figures/supp_9b.png" width="1000px"></img>
-<img src="readme_figures/supp_10.png" width="1000px"></img>
+<img src="docs/supp_9b.png" width="1000px"></img>
+<img src="docs/supp_10.png" width="1000px"></img>
 
 >- Ablation study on CelebA dataset.
 
@@ -165,8 +175,8 @@ We will provide datasets for demo purposes soon.
     │   ├── fuse/             # FUSE microscopy dataset
     │   └── ...
     ├── data_modules/         # Ancillary data modules
+    ├── docs/                 # Images for README
     ├── FUSE_Flow/            # FUSE-Flow model source code
-    ├── misc/                 # Images for README
     ├── utils/                # Utility functions to faciliate training and testing
     ├── .gitignore
     ├── configurations.yaml   # Model configurations
@@ -175,26 +185,24 @@ We will provide datasets for demo purposes soon.
     ├── test.py               # Testing script
     └── train.py              # Training script
 
-> Final file structure.
+<img src="docs/file_structure.png" width="1000px"></img>
 
-_train.py_ and _test.py_ can be simply ran once _configuration.yaml_ and _data/_ is implemented.
+_train.py_ and _test.py_ can simply be run once _configuration.yaml_ is implemented.
 
-## Contributing
+## Inquiries
 
-This repository will continue development through the GitHub Issues tab. If you would like 
-to contribute or have any inquiries, feel free to create a pull request or drop Joel an email at 
-joel_ang@imcb.a-star.edu.sg. Thank you.
+If you have any inquiries, feel free to drop an email to Kaicheng (principal investigator and
+corresponding author) at liang_kaicheng@imcb.a-star.edu.sg or Joel (lead developer and first
+author) at joelangly@outlook.com. Thank you.
 
 ## Acknowledgments
 
-This work was supported by the Singapore National Research Foundation Fellowship (NRFF13-2021-0057) 
-and the Agency for Science, Technology and Research (A*STAR).
-We would like to thank Dr Chee Bing Ong for his invaluable support and pathology-related consultations, 
-Dr Nazihah Husna Abdul Aziz for her input into various experiment designs, 
-Zhe Li Ha for her artistic contributions to figure design, 
-Li Qin Shen for her contributions to software development for microscope automation, 
-Stefanie Zi En Lim and Jeremy Rui Quan Lee for their contributions to data preparation, 
-Rachel Yixuan Tan for her contributions to initial mechanical designs, 
-and Dr Zesheng Zheng for engineering-related consultations.
-We would also like to acknowledge Nikon Imaging Centre (NIC) @ Singapore Bioimaging Consortium (SBIC) 
-for their confocal and brightfield imaging system.
+We would like to thank Dr. Chee Bing Ong for his invaluable support and pathology-related
+consultations, Dr. Nazihah Husna Abdul Aziz for her input into various experiment designs,
+Zhe Li Ha for her artistic contributions to figure design, Li Qin Shen for her contributions
+to software development for microscope automation, Stefanie Zi En Lim and Jeremy Rui Quan Lee
+for their contributions to data preparation, Rachel Yixuan Tan for her contributions to initial
+mechanical designs, and Dr. Zesheng Zheng for engineering-related consultations. We would also
+like to acknowledge Nikon Imaging Centre (NIC) @ Singapore Bioimaging Consortium (SBIC) for
+permitting access to their confocal and brightfield imaging systems. Part of this effort was
+conducted at the Institute of Bioengineering & Bioimaging (IBB), A*STAR.
