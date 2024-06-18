@@ -99,7 +99,7 @@ abstract = {Cellular imaging of thick samples requires physical sectioning or la
 ### _configurations.yaml_
 
 Hyperparameters, architecture modifications, and configurations for training and testing are defined 
-in a _configurations.yaml_ text file. The file is _.gitignore_'ed for commit cleanliness, so you'll 
+in a `configurations.yaml` text file. The file is `.gitignore`'ed for commit cleanliness, so you'll 
 have to create your own. Below are the defaults.
 ```yaml
 ablation:
@@ -148,15 +148,15 @@ data:
 training:
   run_name: null  # name of training run. defaults to integer increments
   filename: train  # filename of NPZ file to be used for training
-  epochs: 128
-  batch_size: 8
+  epochs: 128  # number of training cycles through entire dataset
+  batch_size: 8  # number of data points per training iteration
   sample_size: null  # sample subset of training data from NPZ. accepts 0-1 float representing proportion or integers representing absolute counts
   log_interval: 4  # log every n-th step
   flush: 16  # flush logs from RAM to txt file every n-th step
 testing:
   run_name: null  # name of run to test. defaults to the largest integer filename
   filename: test  # filename of NPZ file to be used for testing
-  batch_size: 128
+  batch_size: 128  # number of data points per testing iteration
   sample_size: 256  # sample subset of training data from NPZ. accepts 0-1 float representing proportion or integers representing absolute counts  
   posterior_sample_size: 16  # number of samples to generate per prediction
   temperature: [0.0001, 0.5, 0.8, 1.0]  # standard deviation values of Gaussian prior to generate outputs at
@@ -187,7 +187,24 @@ We will provide datasets for demo purposes soon.
 
 <img src="docs/file_structure.png" width="1000px"></img>
 
-_train.py_ and _test.py_ can simply be run once _configuration.yaml_ is implemented.
+`train.py` and `test.py` can simply be run once `configuration.yaml` is implemented.
+
+### Pre-training
+
+For best results, pre-training of the SR block is recommended. To do so, follow these steps:
+1. Set `no_gan` in `configurations.yaml` to `true`. This will deactivate the other GAN modules and
+only train using the loss specified in `edsr_loss` in `configurations.yaml`.
+2. Click run on `train.py` after ensuring the rest of `configurations.yaml` are set according to
+your specifications. Batch size should likely be much greater since training on just the SR block
+requires much less memory.
+3. After training is complete, navigate to the relevant log folder containing the results of the
+training run. In the `checkpoints` folder, you'll find the latest version of the weights saved.
+Copy the weight file.
+4. Navigate to `FUSE-Flow/models/pretrain_unet/`. Paste the weight file into this folder. Rename
+it to `weights.pth`.
+5. Now set `no_gan` in `configurations.yaml` to `false` and ensure that `no_pretrain` is set to
+`false` as well. Batch size should likely be reduced now that the other GAN modules are included.
+6. Click run on `train.py`.
 
 ## Inquiries
 
